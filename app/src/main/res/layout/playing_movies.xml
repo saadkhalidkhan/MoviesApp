@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--<ImageView-->
+            <!--android:id="@+id/image"-->
+            <!--android:layout_weight="0.5"-->
+
+            <!--android:layout_width="50dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:layout_height="150dp"-->
+            <!--/>-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:transitionName="poster"
+            android:layout_weight=".5"
+            android:id="@+id/poster"
+            android:scaleType="centerCrop"
+            android:layout_width="50dp"
+            android:layout_height="150dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:weightSum="5">
+
+            <TextView
+
+                android:text="Movie Name"
+                android:id="@+id/title"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Release Date"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Overview"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:maxLength="50"
+                android:id="@+id/overview"
+                android:textSize="13sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="More Info"
+                android:layout_weight="1"
+                android:id="@+id/more"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#e7e7e7" />
+
+</LinearLayout>
