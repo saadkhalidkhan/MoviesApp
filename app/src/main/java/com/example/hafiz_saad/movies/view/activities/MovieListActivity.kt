@@ -121,11 +121,6 @@ class MovieListActivity : AppCompatActivity() {
     }
 
     private fun retrofitInstanceNowPlaying() {
-        //        final OkHttpClient client = new OkHttpClient.Builder()
-        //                .addInterceptor(new LoggingInterceptor())
-        //                .connectTimeout(15, TimeUnit.SECONDS)
-        //                .readTimeout(15, TimeUnit.SECONDS)
-        //                .build();
         val gson = GsonBuilder().serializeNulls().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create()
         retrofit = Retrofit.Builder().baseUrl(nowPlaying_URL!!)
                 //                .client(client)
@@ -153,8 +148,6 @@ class MovieListActivity : AppCompatActivity() {
                         i++
                     }
 
-                    //                    recycleAdapter = new RecycleAdapter(getApplicationContext(),results, rootObject, response.body().getResults().size());
-                    //                    recyclerView.setAdapter(recycleAdapter);
                     Log.d("MainActivity", "OnResponse" + response.body()!!)
                 }
             }

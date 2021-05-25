@@ -84,8 +84,6 @@ public class NowPlayingDetailsActivity extends  YouTubeBaseActivity implements V
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getActionBar().hide();
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_now_playing_details);
         //Add play button to explicitly play video in YouTubePlayerView
 //        if(savedInstanceState!= null){

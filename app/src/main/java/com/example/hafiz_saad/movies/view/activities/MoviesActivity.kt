@@ -118,10 +118,6 @@ class MoviesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         nav_view.setNavigationItemSelectedListener(this)
     }
     fun startActivity(){
-//        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//        }
         retrofitInstancePlaying()
         getRequestPlaying()
         progressDialog!!.dismiss()
@@ -220,7 +216,6 @@ class MoviesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     }
     private fun retrofitInstanceDetails() {
         val client = OkHttpClient.Builder()
-                //                .addInterceptor(new LoggingInterceptor())
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)
                 .build()

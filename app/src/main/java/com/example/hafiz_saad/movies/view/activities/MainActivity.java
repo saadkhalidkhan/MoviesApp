@@ -92,12 +92,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            Transition changeTransition = TransitionInflater.from(this).inflateTransition(R.transition.change_transition);
-//            changeTransition.setDuration(1000);
-////            getWindow().setEnterTransition(new Explode());
-//        }
+
         setContentView(R.layout.activity_main);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycle);
@@ -154,8 +149,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         init_URLs();
-//        retrofitInstanceGenres();
-//        getRequestGenres();
         retrofitInstanceNowPlaying();
         getRequestNowPlaying();
     }
@@ -167,11 +160,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void retrofitInstanceNowPlaying() {
-//        final OkHttpClient client = new OkHttpClient.Builder()
-//                .addInterceptor(new LoggingInterceptor())
-//                .connectTimeout(15, TimeUnit.SECONDS)
-//                .readTimeout(15, TimeUnit.SECONDS)
-//                .build();
+
         final Gson gson =
                 new GsonBuilder().serializeNulls().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
         retrofit = new Retrofit.Builder().baseUrl(nowPlaying_URL)
@@ -202,8 +191,6 @@ public class MainActivity extends AppCompatActivity {
                         i++;
                     }
 
-//                    recycleAdapter = new RecycleAdapter(getApplicationContext(),results, rootObject, response.body().getResults().size());
-//                    recyclerView.setAdapter(recycleAdapter);
                     Log.d("MainActivity", "OnResponse" + response.body());
                 }
             }
